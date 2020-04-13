@@ -3,26 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:600,700|Open+Sans&display=swap"
+      rel="stylesheet"
+    />
     <title>Zeyang Xu</title>
+    <link rel="stylesheet" href="./toggler.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Zeyang Xu</h1>
-    <a href="/ch">中文</a>
-    <p>
-      Hi, I'm a software developer focus on web technologies. I studied Computer
-      Science at Ner York University and I had web front-end summer intern-ship
-      at
-      <a>Tencent</a>, and going to start my full-time front-end developer job at
-      <a>ByteDance</a>, checkout my full experience on <a>LinkedIn</a>
-    </p>
-    <p>
-      I interested in functional programming, I'm trying to apply various
-      functional programming concept into production, I also building a design
-      tool that can generate code on the fly <a>d4d</a>. I code using vim and
-      tmux, checkout my config and other projects on <a>Github</a>
-    </p>
-    <p>
-      Beside my work, I like fashion and food, I'm also a guitar hobbyist
-    </p>
+    <main>
+      <header>
+        <h1>Zeyang Xu</h1>
+        <div class="toggler sun">
+          <div class="ray-group">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="ray-group rotate45">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="ray-group rotate180">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="ray-group rotate225">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="icon"></div>
+        </div>
+      </header>
+      <a class="link" href="/ch">中文</a>
+
+      <p>
+        Hi, I'm a software developer focus on web technologies. I studied
+        Computer Science at Ner York University and I had interned at
+        <a class="link" href="http://tencent.com/">Tencent</a>, and going to
+        start my full-time front-end developer job at
+        <a class="link" href="https://www.bytedance.com/">ByteDance</a>,
+        checkout my full experience on
+        <a class="link" href="https://www.linkedin.com/in/zeyang-xu-945b6a132/"
+          >LinkedIn</a
+        >
+      </p>
+      <p>
+        I interested in functional programming, I'm trying to apply various
+        functional programming concept into production, I built a design tool
+        that can generate code on the fly
+        <a class="link" href="https://github.com/zeyangxu/d4d-compiler">d4d</a>.
+        For development enviroment I use vim and tmux, checkout my config and
+        other projects on
+        <a class="link" href="https://github.com/zeyangxu/">Github</a>
+      </p>
+      <p>
+        Beside my work, I like food and music, I play guitar as a hobyist.
+      </p>
+      <section class="post">
+        <h2>Articles</h2>
+        <ul class="post__archive">
+          <li class="post__item">
+            <a class="post__title" href="#">Implementing Monad in Typescript</a>
+            <div class="post__date">Apr 11 2020</div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer></footer>
+    <script>
+      var icon = document.querySelector(".toggler .icon");
+      var cont = document.querySelector(".toggler");
+      var body = document.querySelector("body");
+      cont.addEventListener("click", function() {
+        var cls = cont.classList;
+        cls.toggle("sun");
+        body.classList.toggle("dark");
+      });
+    </script>
   </body>
 </html>
