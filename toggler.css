@@ -16,11 +16,19 @@
   width: var(--box-size);
   height: var(--box-size);
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .toggler * {
+  -webkit-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
   box-sizeing: border-box;
 }
@@ -38,9 +46,21 @@
   height: 100%;
   position: absolute;
   border-radius: 50%;
+  -webkit-transform: translateX(var(--shadow-offset));
+  -ms-transform: translateX(var(--shadow-offset));
   transform: translateX(var(--shadow-offset));
+  -webkit-box-shadow: var(--shadow-offset-neg) 0 0 0 #333;
   box-shadow: var(--shadow-offset-neg) 0 0 0 #333;
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in-out,
+    -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-box-shadow 0.5s ease-in-out,
+    -webkit-transform 0.5s ease-in-out;
+  -o-transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
   transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out,
+    -webkit-box-shadow 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
   transition-delay: 0.25s;
 }
 
@@ -49,13 +69,27 @@
   height: var(--sun-size);
   /*   transform: translateX(50px);
   box-shadow: var(--shape-size-neg) 0 0 0 #333; */
+  -webkit-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
   transition-delay: 0.25s;
 }
 
 .toggler.sun .icon::after {
+  -webkit-transform: translateX(var(--shadow-size));
+  -ms-transform: translateX(var(--shadow-size));
   transform: translateX(var(--shadow-size));
+  -webkit-box-shadow: var(--shadow-size-neg) 0 0 0 #333;
   box-shadow: var(--shadow-size-neg) 0 0 0 #333;
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in-out,
+    -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-box-shadow 0.5s ease-in-out,
+    -webkit-transform 0.5s ease-in-out;
+  -o-transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
   transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out,
+    -webkit-box-shadow 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition-delay: 0s;
+  -o-transition-delay: 0s;
   transition-delay: 0s;
 }
 
@@ -65,12 +99,18 @@
   width: 100%;
 }
 .rotate45 {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 .rotate180 {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .rotate225 {
+  -webkit-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
   transform: rotate(225deg);
 }
 span {
@@ -84,6 +124,8 @@ span {
 }
 .toggler.sun span {
   opacity: 1;
+  -webkit-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
   transition-delay: 0.25s;
 }
 .ray-group span:nth-child(1) {
