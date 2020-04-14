@@ -38,6 +38,16 @@ main {
   max-width: var(--width-main);
 }
 
+/* responsive */
+@media (max-width: 800px) {
+  main {
+    max-width: 90%;
+  }
+  header {
+    flex-direction: column;
+  }
+}
+
 /* dark mode */
 
 .dark {
