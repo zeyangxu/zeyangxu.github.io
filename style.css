@@ -40,6 +40,9 @@ main {
 
 /* responsive */
 @media (max-width: 800px) {
+  html {
+    font-size: 12px;
+  }
   main {
     max-width: 90%;
   }
